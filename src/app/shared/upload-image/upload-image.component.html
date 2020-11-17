@@ -1,0 +1,10 @@
+<div>
+    <div class="form-row mt-3">
+        <img [src]="imageUrl" [ngClass]="{'circle' : imageIsCircle, 'img':!imageIsCircle}"
+            (click)="inputPictures.click()">
+    </div>
+    <div class="form-row">
+        <input hidden #inputPictures type="file" id="pictures" (change)="fileChange($event)"
+            accept="image/jpg,image/jpeg,image/png">
+    </div>
+</div>

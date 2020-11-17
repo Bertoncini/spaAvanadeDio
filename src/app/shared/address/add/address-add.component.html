@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="col-md-12 p-2" style="float: left !important; ">
+                <div class="col-md-12">
+                    <div class="row">
+                        <mat-form-field>
+                            <mat-label>CEP</mat-label>
+                            <input matInput mask="00000-000" [(ngModel)]="endereco.cep" (focusout)="localizarCep()">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <mat-form-field class="full-width">
+                            <mat-label>Logradouro</mat-label>
+                            <input matInput placeholder="RUa Qualquer" [(ngModel)]="endereco.logradouro">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2">
+                        <mat-form-field>
+                            <mat-label>Num</mat-label>
+                            <input matInput placeholder="2343" [(ngModel)]="endereco.numero">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <mat-form-field class="full-width">
+                            <mat-label>Bairro</mat-label>
+                            <input matInput placeholder="Jardim Do Deserto" [(ngModel)]="endereco.bairro">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-5">
+                        <mat-form-field class="full-width">
+                            <mat-label>Cidade</mat-label>
+                            <input matInput placeholder="Algum lugar" [(ngModel)]="endereco.cidade">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2">
+                        <mat-form-field class="full-width">
+                            <mat-label>Estado</mat-label>
+                            <input matInput [(ngModel)]="endereco.estado">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="col-md-12 p-2">
+            <button class="btn btn-primary" style="float: right;" (click)="addAddress()">Adicionar Endereço</button>
+        </div>
+    </div>
+</div>
